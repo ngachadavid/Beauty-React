@@ -23,3 +23,11 @@ import AdminTable from '../admin/AdminTable';
 import AddProduct from '../admin/AddProduct';
 import Success from '../pages/Success.js';
 
+function App() {
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+    const navigate = useNavigate()
+  
