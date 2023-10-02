@@ -49,3 +49,13 @@ function App() {
         console.log(error);
       }
     };
+
+    const handleLogout = async () => {
+        try {
+            await axios.delete('https://beaty-product-shop.onrender.com/logout');
+            setIsLoggedIn(false);
+            navigate('/login');    
+        } catch (error) {
+            console.log(error);
+        }
+    };
