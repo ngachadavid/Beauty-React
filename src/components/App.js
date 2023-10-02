@@ -75,10 +75,10 @@ function App() {
                 <Route path='/receipt' element={<Receipt/>}/>
                 <Route path='/payment' element={<Payment/>}/>
                 <Route path='/' element={<LandingPage/>}/>
-                <Route path='/' element={<LandingPage/>}/>
-                <Route path='/' element={<LandingPage/>}/>
-                <Route path='/' element={<LandingPage/>}/>
-                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/signup' element={<Signup/>}/>
+                <Route path='/add-product' element={<AddProduct/>}/>
+                <Route path='/admin-table' element={<AdminTable/>}/>
+                <Route path='/success' element={<Success/>}/>
                 <Route path='/' element={<LandingPage/>}/>
                 <Route path='/' element={<LandingPage/>}/>
                 <Route path='/' element={<LandingPage/>}/>
