@@ -59,3 +59,32 @@ function App() {
             console.log(error);
         }
     };
+
+
+    return (
+        <div className='App'>
+            <Navbar isLoggedIn={isLoggedIn} username={username} handleLogout={handleLogout} />
+            <Routes>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/about' element={<About/>}/>
+                <Route path='/products' element={<ProductPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+                <Route path='/' element={<LandingPage/>}/>
+            </>
+        </div>
+    )
