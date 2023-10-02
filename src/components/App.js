@@ -70,7 +70,7 @@ function App() {
                 <Route path='/products' element={<ProductPage/>}/>
                 <Route path='/product/:id' element={<ProductsInfoPage/>}/>
                 <Route path='/order' element={<Orders/>}/>
-                <Route path='/cart' element={<LShoppingCart/>}/>
+                <Route path='/cart' element={<ShoppingCart/>}/>
                 <Route path='/' element={<LandingPage/>}/>
                 <Route path='/' element={<LandingPage/>}/>
                 <Route path='/' element={<LandingPage/>}/>
