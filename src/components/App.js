@@ -31,3 +31,21 @@ function App() {
   
     const navigate = useNavigate()
   
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      // navigate("/admin-table");
+  
+      try {
+        const response = await axios.post('https://beaty-product-shop.onrender.com/login', {
+          username,
+          password,
+        });
+        console.log(response.data);
+        const { name, email } = response.data;
+        console.log(`Welcome, ${name}! Your email is ${email}.`);
+        setIsLoggedIn(true)
+        navigate("/admin-table");
+      } catch (error) {
+        console.log(error);
+      }
+    };
