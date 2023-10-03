@@ -15,5 +15,16 @@ const AddProduct = () => {
       category: "",
     });
   
-    const 
+    const [category, setCategory] = useState("");
+
+    const handleChange = (e) => {
+     const { name, value } = e.target;
+     setProduct((prevProduct) => ({ ...prevProduct, [name]: value }));
+   }
+ 
+   const handleChangeCategory = (e) => {
+     setCategory(e.target.value);
+   };
+ 
+   const
 }
