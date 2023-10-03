@@ -84,4 +84,7 @@ function App() {
             {/* <Slideshow/> */}
             <Footer/>
         </div>
-    )
+    );
+}
+
+export default App;
