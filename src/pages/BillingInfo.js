@@ -27,4 +27,19 @@ function BillingInfo({ handleChange, handleSubmit, formData }) {
               className="border-gray-300 mb-3 rounded-md shadow-sm focus:border-palette-light focus:ring focus:ring-palette-light focus:ring-opacity-50 w-full"
             />
           </div>
+          <div>
+            <label htmlFor="address" className=" text-sm font-medium text-gray-700 mb-2">
+              Address
+            </label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              autoComplete="address"
+              value={formData.address}
+              onChange={handleChange}
+              required
+              className="border-gray-300 mb-3 rounded-md shadow-sm focus:border-palette-light focus:ring focus:ring-palette-light focus:ring-opacity-50 w-full"
+            />
+          </div>
         
