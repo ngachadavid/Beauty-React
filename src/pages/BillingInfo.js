@@ -42,4 +42,23 @@ function BillingInfo({ handleChange, handleSubmit, formData }) {
               className="border-gray-300 mb-3 rounded-md shadow-sm focus:border-palette-light focus:ring focus:ring-palette-light focus:ring-opacity-50 w-full"
             />
           </div>
-        
+          <div>
+            <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-2">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              autoComplete="tel"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+              className="border-gray-300 rounded-md shadow-sm focus:border-palette-light focus:ring focus:ring-palette-light focus:ring-opacity-50 w-full"
+            />
+          </div>
+        </div>
+
+}
+
+export default BillingInfo;
