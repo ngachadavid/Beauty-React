@@ -4,10 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function BillingInfo({ handleChange, handleSubmit, formData }) {
 
- 
-
-
-  return (
+ return (
   <div className="min-h-80 bg-white max-w-md p-10 my-4 sm:my-8 mx-auto w-full shadow-md rounded-md ">
       <h1 className="text-center text-xl uppercase font-bold underline italic mb-2">Billing Information</h1>
       <form onSubmit={handleSubmit}>
@@ -58,7 +55,17 @@ function BillingInfo({ handleChange, handleSubmit, formData }) {
             />
           </div>
         </div>
-
+        <div className="mt-7">
+          <button
+            type="submit"
+            className="w-full py-2 px-3 border border-transparent rounded-md shadow-sm text-black bg-pink-400 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-palette-light focus:ring-opacity-50"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default BillingInfo;
