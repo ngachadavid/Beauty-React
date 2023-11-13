@@ -21,7 +21,42 @@ function Receipt({ cartItems,  formData, handleConfirm  }) {
           <p> <span className='font-bold mr-1'> Number:</span>  {formData.phoneNumber}</p>
         </div>
       </div>
+      <table className="mx-auto bg-gray-50 rounded-lg p-6">
+        <thead>
+          <tr className="uppercase text-xs sm:text-sm text-black  p-3 border-b border-palette-light">
+            <th className="font-primary font-bold px-12 py-5">Item</th>
+            <th className="font-primary font-bold px-12 py-5">Quantity</th>
+            <th className="font-primary font-bold px-12 py-5">Price</th>
+            <th className="font-primary font-bold px-12 py-5">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cartItems.map((item, index) => (
+            <tr key={index} className="text-grey border-b border-palette-light">
+              <td className="font-primary font-normal px-12 py-5">{item.name}</td>
+              <td className="font-primary font-normal px-12 py-5">{item.quantity}</td>
+              <td className="font-primary font-normal px-12 py-5">{item.price}</td>
+              <td className="font-primary font-normal px-12 py-5">{item.quantity * item.price}</td>
+            </tr>
+          ))}
+          <tr>
+            <td colSpan="3" className="p-5 text-bold text-xl uppercase font-serif">Total:</td>
+            <td className="font-primary font-semibold px-12 py-5 text-pink">{totalPrice}</td>
+          </tr>
+        </tbody>
+      </table>
+     
 
+        <button
+            className="mx-auto block mt-8 px-12 py-3 rounded-2xl text-white font-bold bg-pink-400 hover:bg-pink-800"
+            // onClick={() => setShowReceipt(false)}
+            onClick={handleConfirm}
+        >
+            Confirm 
+      </button>
+      
+    </div>
+  );
 }
 
 export default Receipt;
