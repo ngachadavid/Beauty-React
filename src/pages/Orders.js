@@ -43,6 +43,8 @@ useEffect(() => {
       });
   }
 
+
+  
   // edit quantity in cart
   const handleQuantityChange = (value, item) => {
     axios.patch(`http://localhost:4000/${item.id}`, { quantity: value })
@@ -58,8 +60,7 @@ useEffect(() => {
       });
   }
 
- 
-
+  
   
   const handleCheckout = () => {
     // Clear the cart and set the stage to "billing"
@@ -94,7 +95,32 @@ useEffect(() => {
 
 console.log(formData, cartItems)
 
- 
+  return (
+    <div className='bg-gray-100 pt-5 pb-20'>
+      {stage === "cart" && (
+        <ShoppingCart 
+          cartItems={cartItems} 
+          handleDeleteItem={handleDeleteItem}
+          handleQuantityChange={handleQuantityChange}
+          handleCheckout={handleCheckout}
+        />
+      )}
+      {stage === "billing" && (
+        <BillingInfo
+          handleChange={handleChange} 
+          handleSubmit={handleSubmit}
+          formData={formData}
+        />
+      )}
+      {stage === "receipt" && (
+        <Receipt 
+          cartItems={cartItems}
+          formData={formData}
+          handleConfirm ={handleConfirm }
+        />
+      )}
+    </div>
+  );
 }
 
 export default Orders;
